@@ -1,5 +1,8 @@
 package computer.processor;
 
+import jakarta.enterprise.context.ApplicationScoped;
+
+@ApplicationScoped
 public class AmdProcessor implements Processor {
 
     @Override
