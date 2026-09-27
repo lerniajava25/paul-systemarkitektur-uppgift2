@@ -6,5 +6,5 @@ it makes dependencies clear and ensures the object gets what it needs when it is
 # what did weld solve?
 my own container had to use reflection to find constructors and create dependencies manually. weld does this automatically
 
-How does adding scopes (@ApplicationScoped, etc.) change object lifetimes?
+# how does adding scopes (@ApplicationScoped, etc.) change object lifetimes?
 reflection lets the program inspect classes at runtime. i used it to find constructors and their dependecies
