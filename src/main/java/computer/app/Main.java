@@ -1,6 +1,7 @@
 package computer.app;
 
 import computer.Computer;
+import computer.di.SimpleContainer;
 import computer.processor.IntelProcessor;
 import computer.processor.Processor;
 import computer.storage.SsdStorage;
@@ -16,6 +17,18 @@ public class Main {
 
         Computer computer = new Computer(storage, processor);
 
-        computer.runTask("\nBackup files\n");
+        System.out.println("Manual contructor injection:");
+        computer.runTask("Backup files");
+
+
+        // Part 2: A Minimal DI Container
+        SimpleContainer simpleContainer = new SimpleContainer();
+
+        Computer computerFromContainer = simpleContainer.getInstance(Computer.class);
+
+        System.out.println("Minimal DI Container:");
+        computerFromContainer.runTask("Container backup");
     }
+
+
 }
